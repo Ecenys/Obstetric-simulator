@@ -27,6 +27,9 @@ public class TouchableObject : MonoBehaviour {
             triangles[i, 2] = mesh.triangles[3 * i + 2];
         }
 
+		//objectId = HapticNativePlugin.AddObject(this.transform.position - devicePosition.transform.position, this.transform.localScale, this.transform.localRotation.eulerAngles, vertices, normals, mesh.vertices.Length, triangles, mesh.triangles.Length / 3);
+		//objectId = HapticNativePlugin.AddObject(this.transform.localPosition - devicePosition.transform.localPosition, this.transform.localScale, this.transform.localRotation.eulerAngles, vertices, normals, mesh.vertices.Length, triangles, mesh.triangles.Length / 3);
+		
         objectId = HapticNativePlugin.AddModificableObject(this.transform.localPosition - devicePosition.transform.localPosition, this.transform.localScale, this.transform.localRotation.eulerAngles, vertices, normals, mesh.vertices.Length, triangles, mesh.triangles.Length / 3, stiffness, staticFriction, dynamicFriction, damping, viscosity);
     }
 }

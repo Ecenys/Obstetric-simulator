@@ -119,7 +119,7 @@ extern "C" {
 
 	void stopHaptics(void)
 	{
-		// stop the simulation
+		//// stop the simulation
 		//simulationRunning = false;
 
 		//// wait for graphics and haptics loops to terminate
@@ -129,9 +129,10 @@ extern "C" {
 		//tool->stop();
 
 		//// delete resources
+		//hapticsThread->stop();
 		//delete hapticsThread;
-		//delete world;
 		//delete handler;
+		//delete world;
 	}
 
 	void updateHaptics(void)

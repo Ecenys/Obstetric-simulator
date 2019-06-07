@@ -6,27 +6,27 @@ UnityCHAI3DPlugin.cpp(108): warning C4273: 'startHaptics': inconsistent dll link
   c:\users\oskar-msi\documents\github\unity-chai3d\chai3d-3.2.0\modules\unity\src\plugin\unityplugin\UnityCHAI3DPlugin.h(9): note: see previous definition of 'startHaptics'
 UnityCHAI3DPlugin.cpp(121): warning C4273: 'stopHaptics': inconsistent dll linkage
   c:\users\oskar-msi\documents\github\unity-chai3d\chai3d-3.2.0\modules\unity\src\plugin\unityplugin\UnityCHAI3DPlugin.h(10): note: see previous definition of 'stopHaptics'
-UnityCHAI3DPlugin.cpp(187): warning C4273: 'getProxyPosition': inconsistent dll linkage
+UnityCHAI3DPlugin.cpp(190): warning C4273: 'getProxyPosition': inconsistent dll linkage
   c:\users\oskar-msi\documents\github\unity-chai3d\chai3d-3.2.0\modules\unity\src\plugin\unityplugin\UnityCHAI3DPlugin.h(13): note: see previous definition of 'getProxyPosition'
-UnityCHAI3DPlugin.cpp(204): warning C4273: 'getDevicePosition': inconsistent dll linkage
+UnityCHAI3DPlugin.cpp(207): warning C4273: 'getDevicePosition': inconsistent dll linkage
   c:\users\oskar-msi\documents\github\unity-chai3d\chai3d-3.2.0\modules\unity\src\plugin\unityplugin\UnityCHAI3DPlugin.h(14): note: see previous definition of 'getDevicePosition'
-UnityCHAI3DPlugin.cpp(221): warning C4273: 'isTouching': inconsistent dll linkage
+UnityCHAI3DPlugin.cpp(224): warning C4273: 'isTouching': inconsistent dll linkage
   c:\users\oskar-msi\documents\github\unity-chai3d\chai3d-3.2.0\modules\unity\src\plugin\unityplugin\UnityCHAI3DPlugin.h(16): note: see previous definition of 'isTouching'
-UnityCHAI3DPlugin.cpp(226): warning C4273: 'isButtonPressed': inconsistent dll linkage
+UnityCHAI3DPlugin.cpp(229): warning C4273: 'isButtonPressed': inconsistent dll linkage
   c:\users\oskar-msi\documents\github\unity-chai3d\chai3d-3.2.0\modules\unity\src\plugin\unityplugin\UnityCHAI3DPlugin.h(17): note: see previous definition of 'isButtonPressed'
-UnityCHAI3DPlugin.cpp(231): warning C4273: 'addObject': inconsistent dll linkage
+UnityCHAI3DPlugin.cpp(234): warning C4273: 'addObject': inconsistent dll linkage
   c:\users\oskar-msi\documents\github\unity-chai3d\chai3d-3.2.0\modules\unity\src\plugin\unityplugin\UnityCHAI3DPlugin.h(19): note: see previous definition of 'addObject'
-UnityCHAI3DPlugin.cpp(297): warning C4273: 'addModifiableObject': inconsistent dll linkage
+UnityCHAI3DPlugin.cpp(300): warning C4273: 'addModifiableObject': inconsistent dll linkage
   c:\users\oskar-msi\documents\github\unity-chai3d\chai3d-3.2.0\modules\unity\src\plugin\unityplugin\UnityCHAI3DPlugin.h(20): note: see previous definition of 'addModifiableObject'
-UnityCHAI3DPlugin.cpp(369): warning C4273: 'translateObjects': inconsistent dll linkage
+UnityCHAI3DPlugin.cpp(376): warning C4273: 'translateObjects': inconsistent dll linkage
   c:\users\oskar-msi\documents\github\unity-chai3d\chai3d-3.2.0\modules\unity\src\plugin\unityplugin\UnityCHAI3DPlugin.h(22): note: see previous definition of 'translateObjects'
-UnityCHAI3DPlugin.cpp(382): warning C4273: 'setHapticPosition': inconsistent dll linkage
+UnityCHAI3DPlugin.cpp(389): warning C4273: 'setHapticPosition': inconsistent dll linkage
   c:\users\oskar-msi\documents\github\unity-chai3d\chai3d-3.2.0\modules\unity\src\plugin\unityplugin\UnityCHAI3DPlugin.h(23): note: see previous definition of 'setHapticPosition'
-UnityCHAI3DPlugin.cpp(388): warning C4273: 'setHapticRotation': inconsistent dll linkage
+UnityCHAI3DPlugin.cpp(395): warning C4273: 'setHapticRotation': inconsistent dll linkage
   c:\users\oskar-msi\documents\github\unity-chai3d\chai3d-3.2.0\modules\unity\src\plugin\unityplugin\UnityCHAI3DPlugin.h(24): note: see previous definition of 'setHapticRotation'
      Creating library ..\..\..\..\..\..\Assets\Plugins\UnityPlugin.lib and object ..\..\..\..\..\..\Assets\Plugins\UnityPlugin.exp
   Generating code
-  All 244 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  All 245 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
   Finished generating code
   UnityPlugin.vcxproj -> C:\Users\Oskar-MSI\Documents\GitHub\unity-chai3d\chai3d-3.2.0\modules\Unity\src\plugin\UnityPlugin\..\..\..\..\..\..\Assets\Plugins\UnityPlugin.dll
   UnityPlugin.vcxproj -> ..\..\..\..\..\..\Assets\Plugins\UnityPlugin.pdb (Full PDB)
