@@ -1,0 +1,25 @@
+# Blender MTL File: 'None'
+# Material Count: 2
+
+newmtl Ovary2.001
+Ns 96.000007
+Ka 1.000000 1.000000 1.000000
+Kd 0.333300 0.051000 0.051000
+Ks 0.423000 0.423000 0.423000
+Ke 0.0 0.0 0.0
+Ni 1.500000
+d 1.000000
+illum 2
+map_Bump C:\\Users\\Oscar\\Desktop\\modelos uteros\\entero\\Map__576_Mix.png
+map_Kd C:\\Users\\Oscar\\Desktop\\modelos uteros\\entero\\Map__389_Mix.png
+
+newmtl Uterus_Whole.001
+Ns 99.999988
+Ka 1.000000 1.000000 1.000000
+Kd 0.505900 0.066700 0.078400
+Ks 0.883867 0.883867 0.883867
+Ke 0.0 0.0 0.0
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd C:\\Users\\Oscar\\Desktop\\modelos uteros\\entero\\UterusCapillaries.jpg
