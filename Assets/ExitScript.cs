@@ -4,18 +4,8 @@ using UnityEngine;
 
 public class ExitScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public void Exit()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if( Input.GetKeyDown( KeyCode.Space ) )
-            Debug.Log( "Salgo" );
-			HapticNativePlugin.stopHaptics();
-			//Application.Quit();
+        Application.Quit();
     }
 }
