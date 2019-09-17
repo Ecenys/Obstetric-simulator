@@ -59,11 +59,11 @@ public class IndiceScript : MonoBehaviour
         if (borramiento.value == 0)
             monitor.Borramiento = "<30";
         else if (posicion.value == 1)
-            monitor.Posicion = "40-50";
+            monitor.Borramiento = "40-50";
         else if (posicion.value == 2)
-            monitor.Posicion = "60-70";
+            monitor.Borramiento = "60-70";
         else
-            monitor.Posicion = ">80";
+            monitor.Borramiento = ">80";
 
         monitor.Indice = "" + indice;
 
