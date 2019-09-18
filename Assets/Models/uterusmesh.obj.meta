@@ -3,9 +3,24 @@ guid: 274b3779352d9594e962a57d9a4e0598
 ModelImporter:
   serializedVersion: 25
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: caso_1_cabezapoly1_lambert2
+    second: {fileID: 2100000, guid: f394236f89d96ce4092f152c1e461c58, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: caso_1_cabezapoly2_lambert2
+    second: {fileID: 2100000, guid: f394236f89d96ce4092f152c1e461c58, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: caso_1_vagina
+    second: {fileID: 2100000, guid: f394236f89d96ce4092f152c1e461c58, type: 2}
   materials:
-    importMaterials: 1
+    importMaterials: 0
     materialName: 0
     materialSearch: 1
     materialLocation: 1
