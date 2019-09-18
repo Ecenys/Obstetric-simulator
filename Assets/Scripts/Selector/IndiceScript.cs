@@ -21,6 +21,7 @@ public class IndiceScript : MonoBehaviour
     void Start()
     {
         textField = GetComponent<Text>();
+        madre = "primípara";
     }
 
     // Update is called once per frame
@@ -67,6 +68,11 @@ public class IndiceScript : MonoBehaviour
 
         monitor.Indice = "" + indice;
 
-        monitor.Madre = "Primipara";
+        monitor.Madre = madre;
+    }
+
+    public void setMadre(string tipo)
+    {
+        this.madre = tipo;
     }
 }
