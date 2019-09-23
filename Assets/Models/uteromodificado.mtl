@@ -1,0 +1,23 @@
+# Blender MTL File: 'None'
+# Material Count: 2
+
+newmtl Uterus_Whole
+Ns 99.999988
+Ka 1.000000 1.000000 1.000000
+Kd 0.505900 0.066700 0.078400
+Ks 0.883867 0.883867 0.883867
+Ke 0.0 0.0 0.0
+Ni 1.500000
+d 1.000000
+illum 2
+map_Kd uteros\\entero\\UterusCapillaries.jpg
+
+newmtl caso_1:vagina
+Ns 179.999996
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 0.500000 0.500000
+Ks 0.500000 0.500000 0.500000
+Ke 0.0 0.0 0.0
+Ni 1.450000
+d 1.000000
+illum 2
