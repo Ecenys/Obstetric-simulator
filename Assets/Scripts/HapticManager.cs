@@ -41,6 +41,19 @@ public class HapticManager : MonoBehaviour
     {
         if (isHapticAvail)
             this.transform.localPosition = HapticNativePlugin.GetProxyPosition();
+        if (Input.GetKeyDown("space"))
+        {
+            print("space key was pressed");
+            HapticNativePlugin.moveTo(0.0, 0.0, 0.0);
+        }
+    }
+    private void Centrar()
+    {
+        if (Input.GetKeyDown("space"))
+        {
+            print("space key was pressed");
+            HapticNativePlugin.moveTo(0.0, 0.0, 0.0);
+        }
     }
     
 }

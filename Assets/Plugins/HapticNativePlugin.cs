@@ -9,6 +9,9 @@ public class HapticNativePlugin
     public static extern bool prepareHaptics(double hapticScale);
 
     [DllImport("UnityPlugin")]
+    public static extern bool moveTo(double px, double py, double pz);
+
+    [DllImport("UnityPlugin")]
     public static extern void startHaptics();
 
     [DllImport("UnityPlugin")]
