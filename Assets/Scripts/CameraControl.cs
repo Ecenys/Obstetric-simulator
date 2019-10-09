@@ -39,8 +39,9 @@ public class CameraControl : MonoBehaviour {
 			var yMove = Input.GetAxis ("Mouse Y") * -1f * Time.deltaTime;
 			transform.Translate(xMove, yMove, 0f, Space.Self);
 		}
+        Debug.Log(transform.position);
 
-		if (Input.GetKey(KeyCode.UpArrow))
+        if (Input.GetKey(KeyCode.UpArrow))
 			transform.Translate(0f, 0f, 0.5f * Time.deltaTime, Space.World);
 		else if (Input.GetKey(KeyCode.DownArrow))
 			transform.Translate(0f, 0f, -0.5f * Time.deltaTime, Space.World);
@@ -48,7 +49,24 @@ public class CameraControl : MonoBehaviour {
 			transform.Translate(-0.5f * Time.deltaTime, 0f, 0f, Space.World);
 		else if (Input.GetKey(KeyCode.RightArrow))
 			transform.Translate(0.5f * Time.deltaTime, 0f, 0f, Space.World);
-
+        else if (Input.GetKey(KeyCode.Keypad1))
+            transform.position = new Vector3(2.04f, 0f, 0f);
+        else if (Input.GetKey(KeyCode.Keypad2))
+            transform.position = new Vector3(4.07f, 0f, 0f);
+        else if (Input.GetKey(KeyCode.Keypad3))
+            transform.position = new Vector3(0f, -1.04f, 0f);
+        else if (Input.GetKey(KeyCode.Keypad4))
+            transform.position = new Vector3(2.04f, -1.04f, 0f);
+        else if (Input.GetKey(KeyCode.Keypad5))
+            transform.position = new Vector3(4.07f, -1.04f, 0f);
+        else if (Input.GetKey(KeyCode.Keypad6))
+            transform.position = new Vector3(0f, -2.4f, 0f);
+        else if (Input.GetKey(KeyCode.Keypad7))
+            transform.position = new Vector3(2.04f, -2.4f, 0f);
+        else if (Input.GetKey(KeyCode.Keypad8))
+            transform.position = new Vector3(4.07f, -2.4f, 0f);
+        else if (Input.GetKey(KeyCode.Keypad0))
+            transform.position = new Vector3(0f, 0f, 0f);
         UpdateHapticPosition();
         UpdateHapticRotation();
 	}

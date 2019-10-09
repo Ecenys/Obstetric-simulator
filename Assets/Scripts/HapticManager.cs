@@ -31,8 +31,7 @@ public class HapticManager : MonoBehaviour
         {
             HapticNativePlugin.startHaptics();
 
-            //HapticNativePlugin.moveTo(0.0, 0.0, 0.0);
-            HapticNativePlugin.moveTo(40.0, 0.0, 0.0);
+            HapticNativePlugin.moveTo(0.03, 0.0, 0.0, false);
         }
         //0,0,7 coordenadas de inicio
     }
@@ -48,11 +47,11 @@ public class HapticManager : MonoBehaviour
         if (isHapticAvail)
             this.transform.localPosition = HapticNativePlugin.GetProxyPosition();
         Debug.Log(this.transform.localPosition);
-        if (Input.GetKeyDown(KeyCode.B))
-        {
-            Debug.Log("space key was pressed");
-            HapticNativePlugin.moveTo(40.0, 0.0, 0.0);
-        }
+        //if (Input.GetKeyDown(KeyCode.B))
+        //{
+        //    Debug.Log("space key was pressed");
+        //    HapticNativePlugin.moveTo(40.0, 0.0, 0.0);
+        //}
     }
     //private void Centrar()
     //{
