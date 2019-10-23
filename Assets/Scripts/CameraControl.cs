@@ -69,9 +69,34 @@ public class CameraControl : MonoBehaviour {
             transform.position = new Vector3(16f, position, 0.341f);
         else if (Input.GetKey(KeyCode.Keypad0))
             transform.position = new Vector3(0f, position, 0.341f);
-        else if (Input.GetKey(KeyCode.Space)) {
+        else if (Input.GetKey(KeyCode.Q)) {
             transform.position = new Vector3(0f, -1f, 0.341f);
             position = -1;
+        }
+        else if (Input.GetKey(KeyCode.W))
+        {
+            transform.position = new Vector3(0f, -2f, 0.341f);
+            position = -2;
+        }
+        else if (Input.GetKey(KeyCode.E))
+        {
+            transform.position = new Vector3(0f, -3f, 0.341f);
+            position = -3;
+        }
+        else if (Input.GetKey(KeyCode.R))
+        {
+            transform.position = new Vector3(0f, -4f, 0.341f);
+            position = -4;
+        }
+        else if (Input.GetKey(KeyCode.T))
+        {
+            transform.position = new Vector3(0f, -5f, 0.341f);
+            position = -5;
+        }
+        else if (Input.GetKey(KeyCode.Y))
+        {
+            transform.position = new Vector3(0f, -6f, 0.341f);
+            position = -6;
         }
         UpdateHapticPosition();
         UpdateHapticRotation();
