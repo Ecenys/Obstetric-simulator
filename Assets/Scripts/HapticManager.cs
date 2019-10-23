@@ -46,7 +46,7 @@ public class HapticManager : MonoBehaviour
     {
         if (isHapticAvail)
             this.transform.localPosition = HapticNativePlugin.GetProxyPosition();
-        Debug.Log(this.transform.localPosition);
+        //Debug.Log(this.transform.localPosition);
         //if (Input.GetKeyDown(KeyCode.B))
         //{
         //    Debug.Log("space key was pressed");
