@@ -1,0 +1,15 @@
+<Propiedades>
+                      <Nombre> prueba </Nombre>
+                      <Utero>
+                          <Dilatacion> 0 </Dilatacion>
+                          <Borramiento> <30 </Borramiento>
+                          <Consistencia> Firme </Consistencia>
+                          <Posicion> Posterior </Posicion>
+                          <Plano>  </Plano>
+                          <Madre> primípara </Madre>
+                       </Utero>
+                       <Bebe>
+                          <Tipo>  </Tipo>
+                          <Orientacion> DIA </Orientacion>
+                       </Bebe>
+                  </Propiedades>

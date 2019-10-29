@@ -17,6 +17,7 @@ public class MonitorScript : MonoBehaviour
     public string Tipo;
     public string Orientacion;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,7 +32,7 @@ public class MonitorScript : MonoBehaviour
         Orientacion = "";
     }
 
-    private string CreateXML(string Nombre)
+    public string CreateXML(string Nombre)
     {
         return @"<Propiedades>
                       <Nombre> " + Nombre + @" </Nombre>
@@ -50,7 +51,7 @@ public class MonitorScript : MonoBehaviour
                   </Propiedades>";
     }
 
-    private void ReadXML(string Xml) {
+    public void ReadXML(string Xml) {
         XmlDocument doc = new XmlDocument();
         doc.LoadXml(Xml);
         //doc.Load(new StringReader(Xml));
@@ -77,5 +78,14 @@ public class MonitorScript : MonoBehaviour
             this.Orientacion = Orientacion[0].InnerText;
         }
         catch(Exception ex) { Debug.Log("Archivo corrupto"); }
+    }
+    public void SetTipo(string tipo)
+    {
+        Tipo = tipo;
+    }
+
+    public void SetOrientacion(string orientacion)
+    {
+        Orientacion = orientacion;
     }
 }

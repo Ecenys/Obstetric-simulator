@@ -1,0 +1,15 @@
+<Propiedades>
+                      <Nombre> asd </Nombre>
+                      <Utero>
+                          <Dilatacion>  </Dilatacion>
+                          <Borramiento>  </Borramiento>
+                          <Consistencia>  </Consistencia>
+                          <Posicion>  </Posicion>
+                          <Plano>  </Plano>
+                          <Madre>  </Madre>
+                       </Utero>
+                       <Bebe>
+                          <Tipo>  </Tipo>
+                          <Orientacion>  </Orientacion>
+                       </Bebe>
+                  </Propiedades>

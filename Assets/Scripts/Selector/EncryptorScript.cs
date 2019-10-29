@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class EncryptorScript : MonoBehaviour
 {
-    // Start is called before the first frame update
+    //sta función desencripta la cadena que le envíamos en el parámentro de entrada
     public string Encriptar(string _cadenaAencriptar)
     {
         string result = string.Empty;
