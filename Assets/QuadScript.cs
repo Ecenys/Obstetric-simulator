@@ -8,42 +8,37 @@ public class QuadScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("Funciono");
+        //Debug.Log("Funciono");
     }
 
     // Update is called once per frame
     void Update()
     {
-        Debug.Log("Sigo vivo");
+        //Debug.Log("Sigo vivo");
     }
 
-    void OnCollisionEnter(Collision collision)
-    {
-        Debug.Log("peneenter");
-        circle.color = Color.green;
-        //circle.SetColor("_TintColor", Color.green);
-    }
+    //void OnCollisionEnter(Collision collision)
+    //{
+    //    circle.color = Color.green;
+    //    //circle.SetColor("_TintColor", Color.green);
+    //}
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log("peneentertrigger");
         circle.color = Color.green;
         //circle.SetColor("_TintColor", Color.green);
     }
 
     void OnTriggerExit(Collider other)
     {
-        Debug.Log("penesalidatrigger");
         circle.color = Color.red;
         //circle.SetColor("_TintColor", Color.green);
     }
 
 
-    void OnCollisionExit(Collision collision)
-    {
-
-        Debug.Log("penesalir");
-        circle.color = Color.red;
-        //circle.SetColor("_TintColor", Color.red);
-    }
+    //void OnCollisionExit(Collision collision)
+    //{
+    //    circle.color = Color.red;
+    //    //circle.SetColor("_TintColor", Color.red);
+    //}
 }
