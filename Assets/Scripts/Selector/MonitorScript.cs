@@ -6,6 +6,7 @@ using UnityEngine;
 
 public class MonitorScript : MonoBehaviour
 {
+    //Valores de Canvas Madre
     public string Dilatacion;
     public string Borramiento;
     public string Consistencia;
@@ -14,8 +15,13 @@ public class MonitorScript : MonoBehaviour
     public string Indice;
     public string Madre;
 
+    //Valores de Canvas Bebe
     public string Tipo;
     public string Orientacion;
+
+    private static int ITipo;
+    private static int IOrientacion;
+
 
 
     // Start is called before the first frame update
@@ -30,6 +36,9 @@ public class MonitorScript : MonoBehaviour
         Madre = "";
         Tipo = "";
         Orientacion = "";
+
+        ITipo = 1;
+        IOrientacion = 90;
     }
 
     private void Update()
@@ -92,5 +101,23 @@ public class MonitorScript : MonoBehaviour
     public void SetOrientacion(string orientacion)
     {
         Orientacion = orientacion;
+    }
+
+    public void SetTipo(int tipo) {
+        ITipo = tipo;
+    }
+
+    public void SetOrientacion(int orientacion)
+    {
+        IOrientacion = orientacion;
+    }
+
+    public int GetTipo() {
+        return ITipo;
+    }
+    
+    public int GetOrientacion()
+    {
+        return IOrientacion;
     }
 }

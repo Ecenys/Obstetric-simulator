@@ -7,9 +7,6 @@ public class ToggleScript : MonoBehaviour
     public GameObject image;
     public GameObject model1, model2, model3;
 
-
-    private int last = 0;
-
     public void ChangeModel(int id) {
         //Pongo modelo correspondiente
         if (id <= 7)
