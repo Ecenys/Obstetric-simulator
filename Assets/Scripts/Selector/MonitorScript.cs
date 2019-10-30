@@ -32,6 +32,11 @@ public class MonitorScript : MonoBehaviour
         Orientacion = "";
     }
 
+    private void Update()
+    {
+        
+    }
+
     public string CreateXML(string Nombre)
     {
         return @"<Propiedades>
