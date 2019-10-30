@@ -63,8 +63,8 @@ public class MonitorScript : MonoBehaviour
 
         try
         {
-            XmlNodeList Nombre = doc.GetElementsByTagName("Nombre");
-            string prueba = Nombre[0].InnerText;
+            //XmlNodeList Nombre = doc.GetElementsByTagName("Nombre");
+            //string prueba = Nombre[0].InnerText;
             XmlNodeList Dilatacion = doc.GetElementsByTagName("Dilatacion");
             this.Dilatacion = Dilatacion[0].InnerText;
             XmlNodeList Borramiento = doc.GetElementsByTagName("Borramiento");

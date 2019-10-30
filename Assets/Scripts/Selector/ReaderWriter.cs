@@ -6,19 +6,6 @@ using System.IO;
 
 public class ReaderWriter : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    public class HandleTextFile
-    {
         [MenuItem("Tools/Write file")]
         static void WriteString()
         {
@@ -38,15 +25,12 @@ public class ReaderWriter : MonoBehaviour
         }
 
         [MenuItem("Tools/Read file")]
-        static void ReadString()
+        public string ReadString(string path)
         {
-            string path = "Assets/Resources/test.txt";
-
             //Read the text from directly from the test.txt file
             StreamReader reader = new StreamReader(path);
-            Debug.Log(reader.ReadToEnd());
+            string text = reader.ReadToEnd();
             reader.Close();
+            return text;
         }
-
-    }
 }
