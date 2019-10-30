@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class ImageRotator : MonoBehaviour
 {
-    public GameObject image;
+    public static GameObject image;
     public int position;
 
     public void Start()
     {
+        image = GameObject.Find("Rotator");
         //image.transform.rotation = Quaternion.Euler(0f, 90f, -90f);
     }
     public void Press()
     {
-        image.transform.rotation = Quaternion.Euler(-position, image.transform.rotation.y + 90, image.transform.rotation.z - 90);
+        image.transform.rotation = Quaternion.Euler(0, 0, position - 90);
     }
 
     /**
