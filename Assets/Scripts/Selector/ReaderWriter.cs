@@ -7,8 +7,23 @@ using System.IO;
 public class ReaderWriter : MonoBehaviour
 {
         [MenuItem("Tools/Write file")]
-        static void WriteString()
+        public void WriteString(string path, string text)
         {
+            if (!File.Exists(path))
+            {
+                File.Create(path);
+                TextWriter tw = new StreamWriter(path);
+                tw.WriteLine(text);
+                tw.Close();
+            }
+            else if (File.Exists(path))
+            {
+                TextWriter tw = new StreamWriter(path);
+                tw.WriteLine(text);
+                tw.Close();
+            }
+
+        /*
             string path = "Assets/Resources/test.txt";
 
             //Write some text to the test.txt file
@@ -22,6 +37,7 @@ public class ReaderWriter : MonoBehaviour
 
             //Print the text from the file
             //Debug.Log(asset.text);
+            */
         }
 
         [MenuItem("Tools/Read file")]

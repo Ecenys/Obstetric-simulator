@@ -1,7 +1,9 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Xml;
 
 public class TouchableObject : MonoBehaviour {
+    public string ParteDelCuerpo;
 
 	public double stiffness;
 	public double staticFriction;
@@ -12,6 +14,12 @@ public class TouchableObject : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        string options = GetComponent<ReaderWriter>().ReadString("Options.conf");
+        XmlDocument doc = new XmlDocument();
+        doc.LoadXml(options);
+
+        AsignarValores(doc);
+        damping = 0;
 
         var devicePosition = GameObject.Find("Haptic Origin");
 
@@ -32,5 +40,36 @@ public class TouchableObject : MonoBehaviour {
 
         //objectId = HapticNativePlugin.AddModificableObject(this.transform.localPosition - devicePosition.transform.localPosition, this.transform.localScale, this.transform.localRotation.eulerAngles, vertices, normals, mesh.vertices.Length, triangles, mesh.triangles.Length / 3, stiffness, staticFriction, dynamicFriction, damping, viscosity);
         objectId = HapticNativePlugin.AddSimpleObject(this.transform.localPosition - devicePosition.transform.localPosition, this.transform.localScale, this.transform.localRotation.eulerAngles, vertices, normals, mesh.vertices.Length, triangles, mesh.triangles.Length / 3, stiffness / 10, staticFriction / 10, dynamicFriction / 10);
+    }
+
+    private void AsignarValores(XmlDocument doc) {
+        if (ParteDelCuerpo == "Utero")
+        {
+            XmlNodeList Dureza = doc.GetElementsByTagName("DurezaMadre");
+            this.stiffness = double.Parse(Dureza[0].InnerText);
+            XmlNodeList Fricion = doc.GetElementsByTagName("FricionMadre");
+            this.staticFriction = double.Parse(Fricion[0].InnerText);
+            this.dynamicFriction = double.Parse(Fricion[0].InnerText);
+            XmlNodeList Viscosidad = doc.GetElementsByTagName("ViscosidadMadre");
+            this.viscosity = double.Parse(Viscosidad[0].InnerText);
+        }
+        if (ParteDelCuerpo == "Cabeza")
+        {
+            XmlNodeList Dureza = doc.GetElementsByTagName("DurezaHijo");
+            this.stiffness = double.Parse(Dureza[0].InnerText);
+            XmlNodeList Fricion = doc.GetElementsByTagName("FricionHijo");
+            this.staticFriction = double.Parse(Fricion[0].InnerText);
+            this.dynamicFriction = double.Parse(Fricion[0].InnerText);
+            XmlNodeList Viscosidad = doc.GetElementsByTagName("ViscosidadHijo");
+            this.viscosity = double.Parse(Viscosidad[0].InnerText);
+        }
+        if (ParteDelCuerpo == "Fontanela")
+        {
+
+        }
+        if (ParteDelCuerpo == "Vagina")
+        {
+
+        }
     }
 }

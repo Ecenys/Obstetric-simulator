@@ -13,6 +13,5 @@ public class ResumeController : MonoBehaviour
         int orientacion = GameObject.FindWithTag("God").GetComponent<MonitorScript>().GetOrientacion();
         GetComponent<ToggleScript>().ChangeModel(id);
         Rotator.transform.rotation = Quaternion.Euler(0, 0, orientacion - 90);
-        Debug.Log(orientacion);
     }
 }
