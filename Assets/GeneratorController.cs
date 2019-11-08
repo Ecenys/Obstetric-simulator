@@ -24,6 +24,13 @@ public class GeneratorController : MonoBehaviour
 
     ReaderWriter rw;
     string xml;
+
+    //partes del cuerpo
+    public GameObject MeshAnterior, MeshMedio, MeshPosterior;
+    public GameObject Cabeza, Fontanelas, Cara, Nalgas, Espalda;
+    public GameObject OrigenAnterior, OrigenMedio, OrigenPosterior;
+    public GameObject Donut;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,8 +38,11 @@ public class GeneratorController : MonoBehaviour
         rw = GetComponent<ReaderWriter>();
         xml = rw.ReadString("simulation.conf");
         File.Delete("simulation.conf");
-        xml = GetComponent<EncryptorScript>().DesEncriptar(xml);
+        xml = GameObject.FindWithTag("God").GetComponent<EncryptorScript>().DesEncriptar(xml);
+        File.WriteAllText(@"prueba.text", xml); //salida de texto a un archivo prueba.text sin codificar, para comprobación de salida, borrar en un futuro
         ReadXML(xml);
+
+        Debug.Log(xml);
 
         //Simulacion
         //Donut
@@ -56,11 +66,45 @@ public class GeneratorController : MonoBehaviour
         {
             //Seleccionar plano
         }
-        
+        Debug.Log("paso por aqui");
+        Debug.Log("+"+ Tipo + "+");
+
         //Bebe
         switch (Tipo)
         {
             //seleccionar modelo bebe
+            case ("1"):
+            case ("2"):
+            case ("3"):
+            case ("4"):
+            case ("5"):
+            case ("6"):
+            case ("7"):
+
+                Debug.Log("paso por aqui tambien");
+                Cabeza.SetActive(true);
+                Fontanelas.SetActive(true);
+                Nalgas.SetActive(false);
+                Espalda.SetActive(false);
+                break;
+            case ("8"):
+                Cabeza.SetActive(false);
+                Fontanelas.SetActive(false);
+                Nalgas.SetActive(true);
+                Espalda.SetActive(false);
+                Debug.Log("8");
+                break;
+            case ("9"):
+                Cabeza.SetActive(false);
+                Fontanelas.SetActive(false);
+                Nalgas.SetActive(false);
+                Espalda.SetActive(true);
+
+                Debug.Log("9");
+                break;
+            default:
+                Debug.Log("no me meto en ningun lado");
+                break;
         }
         switch (Plano)
         {
@@ -97,6 +141,6 @@ public class GeneratorController : MonoBehaviour
             XmlNodeList Orientacion = doc.GetElementsByTagName("Orientacion");
             this.Orientacion = Orientacion[0].InnerText;
         }
-        catch (System.Exception ex) { Debug.Log("Archivo corrupto"); }
+        catch (System.Exception) { Debug.Log("Archivo corrupto"); }
     }
 }

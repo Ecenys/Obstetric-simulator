@@ -58,13 +58,13 @@ public class IndiceScript : MonoBehaviour
             monitor.Posicion = "Anterior";
 
         if (borramiento.value == 0)
-            monitor.Borramiento = "<30";
+            monitor.Borramiento = "30";
         else if (posicion.value == 1)
             monitor.Borramiento = "40-50";
         else if (posicion.value == 2)
             monitor.Borramiento = "60-70";
         else
-            monitor.Borramiento = ">80";
+            monitor.Borramiento = "80";
 
         if (plano.value == 0)
             monitor.Plano = "SES";

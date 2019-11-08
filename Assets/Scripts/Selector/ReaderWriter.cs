@@ -43,10 +43,11 @@ public class ReaderWriter : MonoBehaviour
         [MenuItem("Tools/Read file")]
         public string ReadString(string path)
         {
-            //Read the text from directly from the test.txt file
-            StreamReader reader = new StreamReader(path);
-            string text = reader.ReadToEnd();
-            reader.Close();
-            return text;
+        //Read the text from directly from the test.txt file
+        StreamReader reader = new StreamReader(path);
+        string text = reader.ReadToEnd();
+        reader.Close();
+        //return File.ReadAllText(path);
+        return text;
         }
 }

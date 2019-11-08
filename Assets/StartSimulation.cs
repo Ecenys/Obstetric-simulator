@@ -9,12 +9,12 @@ public class StartSimulation : MonoBehaviour
     public void LoadSimulation() {
         //Paso de parametros
         string text = GameObject.FindWithTag("God").GetComponent<MonitorScript>().CreateXML("simulation.conf");//Creacion de xml
-        text = GetComponent<EncryptorScript>().Encriptar(text); //encriptación de xml
-        File.Create("simulation.conf");
-        TextWriter tw = new StreamWriter("simulation.conf");
-        tw.WriteLine(text);
-        tw.Close();
-
+        text = GameObject.FindWithTag("God").GetComponent<EncryptorScript>().Encriptar(text); //encriptación de xml
+        //File.Create("simulation.conf");
+        //TextWriter tw = new StreamWriter("simulation.conf");
+        //tw.WriteLine(text);
+        //tw.Close();
+        File.WriteAllText(@"simulation.conf", text);
         //Emepezar simulacion
         SceneManager.LoadScene("Main");
     }

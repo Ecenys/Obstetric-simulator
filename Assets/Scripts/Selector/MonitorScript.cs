@@ -27,15 +27,16 @@ public class MonitorScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Dilatacion = "";
-        Borramiento = "";
-        Consistencia = "";
-        Posicion = "";
-        Plano = "";
-        Indice = "";
-        Madre = "";
-        Tipo = "";
-        Orientacion = "";
+        //asignación de valores predeterminados
+        Dilatacion = "0";
+        Borramiento = "30";
+        Consistencia = "Firme";
+        Posicion = "Posterior";
+        Plano = "SES";
+        Indice = "0";
+        Madre = "primipara";
+        Tipo = "1";
+        Orientacion = "DA";
 
         ITipo = 1;
         IOrientacion = 90;
@@ -49,18 +50,18 @@ public class MonitorScript : MonoBehaviour
     public string CreateXML(string Nombre)
     {
         return @"<Propiedades>
-                      <Nombre> " + Nombre + @" </Nombre>
+                      <Nombre>" + Nombre + @"</Nombre>
                       <Utero>
-                          <Dilatacion> " + Dilatacion + @" </Dilatacion>
-                          <Borramiento> " + Borramiento + @" </Borramiento>
-                          <Consistencia> " + Consistencia + @" </Consistencia>
-                          <Posicion> " + Posicion + @" </Posicion>
-                          <Plano> " + Plano+ @" </Plano>
-                          <Madre> " + Madre + @" </Madre>
+                          <Dilatacion>" + Dilatacion + @"</Dilatacion>
+                          <Borramiento>" + Borramiento + @"</Borramiento>
+                          <Consistencia>" + Consistencia + @"</Consistencia>
+                          <Posicion>" + Posicion + @"</Posicion>
+                          <Plano>" + Plano+ @"</Plano>
+                          <Madre>" + Madre + @"</Madre>
                        </Utero>
                        <Bebe>
-                          <Tipo> " + Tipo + @" </Tipo>
-                          <Orientacion> " + Orientacion + @" </Orientacion>
+                          <Tipo>" + Tipo + @"</Tipo>
+                          <Orientacion> "+ Orientacion + @"</Orientacion>
                        </Bebe>
                   </Propiedades>";
     }
@@ -91,7 +92,7 @@ public class MonitorScript : MonoBehaviour
             XmlNodeList Orientacion = doc.GetElementsByTagName("Orientacion");
             this.Orientacion = Orientacion[0].InnerText;
         }
-        catch(Exception ex) { Debug.Log("Archivo corrupto"); }
+        catch(Exception) { Debug.Log("Archivo corrupto"); }
     }
     public void SetTipo(string tipo)
     {

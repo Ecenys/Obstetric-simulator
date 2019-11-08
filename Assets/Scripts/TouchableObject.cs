@@ -14,7 +14,7 @@ public class TouchableObject : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        string options = GetComponent<ReaderWriter>().ReadString("Options.conf");
+        string options = GameObject.FindWithTag("God").GetComponent<ReaderWriter>().ReadString("Options.conf");
         XmlDocument doc = new XmlDocument();
         doc.LoadXml(options);
 
@@ -47,9 +47,11 @@ public class TouchableObject : MonoBehaviour {
         {
             XmlNodeList Dureza = doc.GetElementsByTagName("DurezaMadre");
             this.stiffness = double.Parse(Dureza[0].InnerText);
+
             XmlNodeList Fricion = doc.GetElementsByTagName("FricionMadre");
             this.staticFriction = double.Parse(Fricion[0].InnerText);
             this.dynamicFriction = double.Parse(Fricion[0].InnerText);
+
             XmlNodeList Viscosidad = doc.GetElementsByTagName("ViscosidadMadre");
             this.viscosity = double.Parse(Viscosidad[0].InnerText);
         }
@@ -57,15 +59,25 @@ public class TouchableObject : MonoBehaviour {
         {
             XmlNodeList Dureza = doc.GetElementsByTagName("DurezaHijo");
             this.stiffness = double.Parse(Dureza[0].InnerText);
+
             XmlNodeList Fricion = doc.GetElementsByTagName("FricionHijo");
             this.staticFriction = double.Parse(Fricion[0].InnerText);
             this.dynamicFriction = double.Parse(Fricion[0].InnerText);
+
             XmlNodeList Viscosidad = doc.GetElementsByTagName("ViscosidadHijo");
             this.viscosity = double.Parse(Viscosidad[0].InnerText);
         }
         if (ParteDelCuerpo == "Fontanela")
         {
+            XmlNodeList Dureza = doc.GetElementsByTagName("DurezaHijoFontanela");
+            this.stiffness = double.Parse(Dureza[0].InnerText);
 
+            XmlNodeList Fricion = doc.GetElementsByTagName("FricionHijoFontanela");
+            this.staticFriction = double.Parse(Fricion[0].InnerText);
+            this.dynamicFriction = double.Parse(Fricion[0].InnerText);
+
+            XmlNodeList Viscosidad = doc.GetElementsByTagName("ViscosidadHijoFontanela");
+            this.viscosity = double.Parse(Viscosidad[0].InnerText);
         }
         if (ParteDelCuerpo == "Vagina")
         {
