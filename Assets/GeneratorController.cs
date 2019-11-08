@@ -66,9 +66,6 @@ public class GeneratorController : MonoBehaviour
         {
             //Seleccionar plano
         }
-        Debug.Log("paso por aqui");
-        Debug.Log("+"+ Tipo + "+");
-
         //Bebe
         switch (Tipo)
         {
@@ -80,8 +77,6 @@ public class GeneratorController : MonoBehaviour
             case ("5"):
             case ("6"):
             case ("7"):
-
-                Debug.Log("paso por aqui tambien");
                 Cabeza.SetActive(true);
                 Fontanelas.SetActive(true);
                 Nalgas.SetActive(false);
@@ -92,18 +87,12 @@ public class GeneratorController : MonoBehaviour
                 Fontanelas.SetActive(false);
                 Nalgas.SetActive(true);
                 Espalda.SetActive(false);
-                Debug.Log("8");
                 break;
             case ("9"):
                 Cabeza.SetActive(false);
                 Fontanelas.SetActive(false);
                 Nalgas.SetActive(false);
                 Espalda.SetActive(true);
-
-                Debug.Log("9");
-                break;
-            default:
-                Debug.Log("no me meto en ningun lado");
                 break;
         }
         switch (Plano)
