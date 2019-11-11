@@ -3,6 +3,8 @@ using System.Collections;
 
 public class CameraControl : MonoBehaviour {
 
+    public GameObject ocultar, ocultar2;
+
 	private float rotationX = 0f;
 	private float rotationY = 0f;
 
@@ -17,6 +19,10 @@ public class CameraControl : MonoBehaviour {
 
     private void Start()
     {
+        //muevo la camapara para posicionarla
+        transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - 2);
+        
+        //Coloco el cursor en la camara
         chalkRef = GameObject.Find("Chalk Ref").transform;
         chalkRef.parent = this.transform;
         previousPosition = chalkRef.position;
@@ -25,8 +31,19 @@ public class CameraControl : MonoBehaviour {
         UpdateHapticPosition();
     }
 
+    private bool prueba = true;
 	// Update is called once per frame
 	void Update () {
+        //coloco el cursor
+        if (transform.position == new Vector3(0, 0, -0.152f))
+        {
+            prueba = false;
+            ocultar.SetActive(false);
+            ocultar2.SetActive(false);
+            //Destroy(ocultar)
+        }
+        if(prueba)
+            transform.position = Vector3.MoveTowards(transform.position, new Vector3(0, 0, -0.152f), 0.01f);
 
 		float scroll = Input.GetAxis("Mouse ScrollWheel");
 		transform.Translate(0, 0f, scroll * 0.1f, Space.Self);

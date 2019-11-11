@@ -83,5 +83,13 @@ public class TouchableObject : MonoBehaviour {
         {
 
         }
+
+        if (ParteDelCuerpo == "Nada")
+        {
+            this.stiffness = 8;
+            this.staticFriction = 0;
+            this.dynamicFriction = 0;
+            this.viscosity = 0;
+        }
     }
 }
