@@ -1,31 +1,29 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class LayerSelectorScript : MonoBehaviour
 {
-    private static int layer;
+    private static int layer = 2;
     private static int maxLayer = 3;
     private static int minLayer = 0;
 
-    private GameObject[] layer1;
-    private GameObject[] layer2;
-    private GameObject[] layer3;
-    private GameObject[] layer0;
+    private static GameObject[] layer1;
+    private static GameObject[] layer2;
+    private static GameObject[] layer3;
+    private static GameObject[] layer0;
     private void Start()
     {
+        //Localizo los objetos que hay en cada capa
         layer0 = GameObject.FindGameObjectsWithTag("Layer 0");
         layer1 = GameObject.FindGameObjectsWithTag("Layer 1");
         layer2 = GameObject.FindGameObjectsWithTag("Layer 2");
         layer3 = GameObject.FindGameObjectsWithTag("Layer 3");
+
+        //Inicializar capas
+        Cambiar();
     }
 
-    private void Update()
+    public void Mas()
     {
-        Debug.Log(layer);
-    }
-
-    public void Mas() {
         if (layer != maxLayer)
         {
             layer++;
@@ -33,8 +31,10 @@ public class LayerSelectorScript : MonoBehaviour
         }
     }
 
-    public void Menos() {
-        if (layer != minLayer) {
+    public void Menos()
+    {
+        if (layer != minLayer)
+        {
             layer--;
             Cambiar();
         }
