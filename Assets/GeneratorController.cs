@@ -55,25 +55,32 @@ public class GeneratorController : MonoBehaviour
         {
             //seleccionar modelo bebe
             case ("1"):
+                Debug.Log("cabeza 1");
                 Cabeza.transform.localRotation = Quaternion.Euler(-48.5f, Cabeza.transform.localRotation.y, Cabeza.transform.localRotation.z);
                 break;
             case ("2"):
                 Cabeza.transform.localRotation = Quaternion.Euler(-62f, Cabeza.transform.localRotation.y, Cabeza.transform.localRotation.z);
+                Debug.Log("cabeza 2");
                 break;
             case ("3"):
                 Cabeza.transform.localRotation = Quaternion.Euler(-48.5f, Cabeza.transform.localRotation.y, Cabeza.transform.localRotation.z);
+                Debug.Log("cabeza 3");
                 break;
             case ("4"):
                 Cabeza.transform.localRotation = Quaternion.Euler(-76f, Cabeza.transform.localRotation.y, Cabeza.transform.localRotation.z);
+                Debug.Log("cabeza 4");
                 break;
             case ("5"):
                 Cabeza.transform.localRotation = Quaternion.Euler(-90f, Cabeza.transform.localRotation.y, Cabeza.transform.localRotation.z);
+                Debug.Log("cabeza 5");
                 break;
             case ("6"):
                 Cabeza.transform.localRotation = Quaternion.Euler(-104f, Cabeza.transform.localRotation.y, Cabeza.transform.localRotation.z);
+                Debug.Log("cabeza 6");
                 break;
             case ("7")://oreja
                 Cabeza.transform.rotation = Quaternion.Euler(Cabeza.transform.rotation.x, -90, Cabeza.transform.rotation.z);
+                Debug.Log("oreja");
                 break;
         }
             //seleccionar modelo bebe
@@ -88,24 +95,24 @@ public class GeneratorController : MonoBehaviour
             case ("7"):
                 Debug.Log("Cabeza");
                 Cabeza.SetActive(true);
-                MeshCabeza.SetActive(true);
-                MeshFontanelas.SetActive(true);
+                //MeshCabeza.SetActive(true);
+                //MeshFontanelas.SetActive(true);
                 Nalgas.SetActive(false);
                 Espalda.SetActive(false);
                 break;
             case ("8"):
                 Debug.Log("Nalgas");
                 Cabeza.SetActive(false);
-                MeshCabeza.SetActive(true);
-                MeshFontanelas.SetActive(false);
+                //MeshCabeza.SetActive(false);
+                //MeshFontanelas.SetActive(false);
                 Nalgas.SetActive(true);
                 Espalda.SetActive(false);
                 break;
             case ("9"):
                 Debug.Log("Espalda");
                 Cabeza.SetActive(false);
-                MeshCabeza.SetActive(true);
-                MeshFontanelas.SetActive(false);
+                //MeshCabeza.SetActive(false);
+                //MeshFontanelas.SetActive(false);
                 Nalgas.SetActive(false);
                 Espalda.SetActive(true);
                 break;
@@ -117,35 +124,35 @@ public class GeneratorController : MonoBehaviour
         {
             case "DA":
                 Debug.Log("DA");
-                Cabeza.transform.localRotation = Quaternion.Euler(Cabeza.transform.localRotation.x, Cabeza.transform.localRotation.y, 180);
+                Cabeza.transform.localRotation = Quaternion.Euler(Cabeza.transform.localRotation.x, 180, Cabeza.transform.localRotation.z);
                 break;
             case "DIA":
                 Debug.Log("DIA");
-                Cabeza.transform.localRotation = Quaternion.Euler(Cabeza.transform.localRotation.x, Cabeza.transform.localRotation.y, 135);
+                Cabeza.transform.localRotation = Quaternion.Euler(Cabeza.transform.localRotation.x, 135, Cabeza.transform.localRotation.z);
                 break;
             case "DITDerecha":
                 Debug.Log("DITDerecha");
-                Cabeza.transform.localRotation = Quaternion.Euler(Cabeza.transform.localRotation.x, Cabeza.transform.localRotation.y, 90);
+                Cabeza.transform.localRotation = Quaternion.Euler(Cabeza.transform.localRotation.x, 90, Cabeza.transform.localRotation.z);
                 break;
             case "DIP":
                 Debug.Log("DIP");
-                Cabeza.transform.localRotation = Quaternion.Euler(Cabeza.transform.localRotation.x, Cabeza.transform.localRotation.y, 45);
+                Cabeza.transform.localRotation = Quaternion.Euler(Cabeza.transform.localRotation.x, 45, Cabeza.transform.localRotation.z);
                 break;
             case "DP":
                 Debug.Log("DP");
-                Cabeza.transform.localRotation = Quaternion.Euler(Cabeza.transform.localRotation.x, Cabeza.transform.localRotation.y, 0);
+                Cabeza.transform.localRotation = Quaternion.Euler(Cabeza.transform.localRotation.x, 0, Cabeza.transform.localRotation.z);
                 break;
             case "DDP":
                 Debug.Log("DDP");
-                Cabeza.transform.localRotation = Quaternion.Euler(Cabeza.transform.localRotation.x, Cabeza.transform.localRotation.y, 225);
+                Cabeza.transform.localRotation = Quaternion.Euler(Cabeza.transform.localRotation.x, 225, Cabeza.transform.localRotation.z);
                 break;
             case "DITIzquierda":
                 Debug.Log("DITIzquierda");
-                Cabeza.transform.localRotation = Quaternion.Euler(Cabeza.transform.localRotation.x, Cabeza.transform.localRotation.y, 270);
+                Cabeza.transform.localRotation = Quaternion.Euler(Cabeza.transform.localRotation.x, 270, Cabeza.transform.localRotation.z);
                 break;
             case "DDA":
                 Debug.Log("DDA");
-                Cabeza.transform.localRotation = Quaternion.Euler(Cabeza.transform.localRotation.x, Cabeza.transform.localRotation.y, 315);
+                Cabeza.transform.localRotation = Quaternion.Euler(Cabeza.transform.localRotation.x, 315, Cabeza.transform.localRotation.z);
                 break;
             default:
                 Debug.Log("No he encontrado nada, tengo la orgientación: "+ Orientacion);
@@ -260,7 +267,7 @@ public class GeneratorController : MonoBehaviour
                 //MeshPosterior.SetActive(true);
                 //MeshMedio.SetActive(false);
                 //MeshAnterior.SetActive(false);
-                Donut.transform.position= new Vector3(0.2399997f, -1, 10);
+                Donut.transform.localPosition= new Vector3(0.2399997f, -1, 10);
                 Donut.transform.rotation = Quaternion.Euler(-48,-180,0);
                 break;
             case "Media":
@@ -274,7 +281,7 @@ public class GeneratorController : MonoBehaviour
                 //MeshPosterior.SetActive(false);
                 //MeshMedio.SetActive(true);
                 //MeshAnterior.SetActive(false);
-                Donut.transform.position = new Vector3(0.2399997f, -1, 9.5f);
+                Donut.transform.localPosition = new Vector3(0.2399997f, -1, 9.5f);
                 Donut.transform.rotation = Quaternion.Euler(-51.7f, 180, 0);
                 break;
             case "Anterior":
@@ -284,7 +291,7 @@ public class GeneratorController : MonoBehaviour
                 //MeshPosterior.SetActive(false);
                 //MeshMedio.SetActive(false);
                 //MeshAnterior.SetActive(true);
-                Donut.transform.position = new Vector3(0.2399997f, -1, 92f);
+                Donut.transform.localPosition = new Vector3(0.2399997f, -1, 92f);
                 Donut.transform.rotation = Quaternion.Euler(-65, -180, 0);
                 break;
         }

@@ -106,6 +106,7 @@ public class MonitorScript : MonoBehaviour
 
     public void SetTipo(int tipo) {
         ITipo = tipo;
+        Tipo = tipo.ToString();
     }
 
     public void SetOrientacion(int orientacion)

@@ -6,7 +6,7 @@ using System.IO;
 
 public class ReaderWriter : MonoBehaviour
 {
-        [MenuItem("Tools/Write file")]
+        //[MenuItem("Tools/Write file")]
         public void WriteString(string path, string text)
         {
             if (!File.Exists(path))
@@ -40,7 +40,7 @@ public class ReaderWriter : MonoBehaviour
             */
         }
 
-        [MenuItem("Tools/Read file")]
+        //[MenuItem("Tools/Read file")]
         public string ReadString(string path)
         {
         //Read the text from directly from the test.txt file
