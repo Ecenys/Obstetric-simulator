@@ -61,7 +61,7 @@ public class MonitorScript : MonoBehaviour
                        </Utero>
                        <Bebe>
                           <Tipo>" + Tipo + @"</Tipo>
-                          <Orientacion> "+ Orientacion + @"</Orientacion>
+                          <Orientacion>"+ Orientacion + @"</Orientacion>
                        </Bebe>
                   </Propiedades>";
     }

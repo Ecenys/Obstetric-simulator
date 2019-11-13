@@ -46,7 +46,8 @@ public class TouchableObject : MonoBehaviour {
         if (ParteDelCuerpo == "Utero")
         {
             XmlNodeList Dureza = doc.GetElementsByTagName("DurezaMadre");
-            this.stiffness = double.Parse(Dureza[0].InnerText);
+            double consistencia = GameObject.FindGameObjectsWithTag("God")[0].GetComponent<GeneratorController>().GetConsistencia();
+            this.stiffness = double.Parse(Dureza[0].InnerText) + consistencia;
 
             XmlNodeList Fricion = doc.GetElementsByTagName("FricionMadre");
             this.staticFriction = double.Parse(Fricion[0].InnerText);

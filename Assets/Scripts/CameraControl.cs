@@ -58,7 +58,7 @@ public class CameraControl : MonoBehaviour {
 			var yMove = Input.GetAxis ("Mouse Y") * -1f * Time.deltaTime;
 			transform.Translate(xMove, yMove, 0f, Space.Self);
 		}
-        Debug.Log(transform.position);
+        //Debug.Log(transform.position);
 
         if (Input.GetKey(KeyCode.UpArrow))
             transform.Translate(0f, 0f, 0.5f * Time.deltaTime, Space.World);

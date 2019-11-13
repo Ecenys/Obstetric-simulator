@@ -59,18 +59,18 @@ public class IndiceScript : MonoBehaviour
 
         if (borramiento.value == 0)
             monitor.Borramiento = "30";
-        else if (posicion.value == 1)
+        else if (borramiento.value == 1)
             monitor.Borramiento = "40-50";
-        else if (posicion.value == 2)
+        else if (borramiento.value == 2)
             monitor.Borramiento = "60-70";
         else
             monitor.Borramiento = "80";
 
         if (plano.value == 0)
             monitor.Plano = "SES";
-        else if (posicion.value == 1)
+        else if (plano.value == 1)
             monitor.Plano = "I";
-        else if (posicion.value == 2)
+        else if (plano.value == 2)
             monitor.Plano = "II";
         else
             monitor.Plano = "III";
