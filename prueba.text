@@ -9,7 +9,7 @@
                           <Madre>primípara</Madre>
                        </Utero>
                        <Bebe>
-                          <Tipo>3</Tipo>
-                          <Orientacion>DP</Orientacion>
+                          <Tipo>2</Tipo>
+                          <Orientacion>DIP</Orientacion>
                        </Bebe>
                   </Propiedades>

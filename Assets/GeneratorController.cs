@@ -334,25 +334,25 @@ public class GeneratorController : MonoBehaviour
             //Seleccionar plano
             case "SES":
                 Debug.Log("SES");
-                Cabeza.transform.position = new Vector3(0.019f, .37f, 1.193f);
+                Cabeza.transform.position = new Vector3(0.019f, 0.1960816f, 1.193f);
                 MeshUtero.SetActive(true);
                 MeshUteroAmpliado.SetActive(false);
                 break;
             case "I":
                 Debug.Log("I");
-                Cabeza.transform.position= new Vector3(0.019f, 0.285f, 1.118f);
+                Cabeza.transform.position= new Vector3(0.019f, 0.129f, 1.134f);
                 MeshUtero.SetActive(true);
                 MeshUteroAmpliado.SetActive(false);
                 break;
             case "II":
                 Debug.Log("II");
-                Cabeza.transform.position = new Vector3(0.019f, 0.214f, 1.055f);
+                Cabeza.transform.position = new Vector3(0.019f, 0.064f, 1.132f);
                 MeshUtero.SetActive(true);
                 MeshUteroAmpliado.SetActive(false);
                 break;
             case "III":
                 Debug.Log("III");
-                Cabeza.transform.position = new Vector3(0.019f, 0.121f, 1.034f);
+                Cabeza.transform.position = new Vector3(0.032f,0.047f,1.07f);
                 MeshUtero.SetActive(false);
                 MeshUteroAmpliado.SetActive(true);
                 break;
