@@ -16,36 +16,36 @@ namespace RockVR.Video.Demo
         {
             if (VideoCaptureCtrl.instance.status == VideoCaptureCtrl.StatusType.NOT_START)
             {
-                if (GUI.Button(new Rect(10, Screen.height - 60, 150, 50), "Start Capture"))
+                if (GUI.Button(new Rect(10, Screen.height - 60, 150, 50), "Iniciar grabación"))
                 {
                     VideoCaptureCtrl.instance.StartCapture();
                 }
             }
             else if (VideoCaptureCtrl.instance.status == VideoCaptureCtrl.StatusType.STARTED)
             {
-                if (GUI.Button(new Rect(10, Screen.height - 60, 150, 50), "Stop Capture"))
+                if (GUI.Button(new Rect(10, Screen.height - 60, 150, 50), "Parar grabación"))
                 {
                     VideoCaptureCtrl.instance.StopCapture();
                 }
-                if (GUI.Button(new Rect(180, Screen.height - 60, 150, 50), "Pause Capture"))
+                if (GUI.Button(new Rect(180, Screen.height - 60, 150, 50), "Pausar grabación"))
                 {
                     VideoCaptureCtrl.instance.ToggleCapture();
                 }
             }
             else if (VideoCaptureCtrl.instance.status == VideoCaptureCtrl.StatusType.PAUSED)
             {
-                if (GUI.Button(new Rect(10, Screen.height - 60, 150, 50), "Stop Capture"))
+                if (GUI.Button(new Rect(10, Screen.height - 60, 150, 50), "Parar grabación"))
                 {
                     VideoCaptureCtrl.instance.StopCapture();
                 }
-                if (GUI.Button(new Rect(180, Screen.height - 60, 150, 50), "Continue Capture"))
+                if (GUI.Button(new Rect(180, Screen.height - 60, 150, 50), "Continuar grabación"))
                 {
                     VideoCaptureCtrl.instance.ToggleCapture();
                 }
             }
             else if (VideoCaptureCtrl.instance.status == VideoCaptureCtrl.StatusType.STOPPED)
             {
-                if (GUI.Button(new Rect(10, Screen.height - 60, 150, 50), "Processing"))
+                if (GUI.Button(new Rect(10, Screen.height - 60, 150, 50), "Procesando"))
                 {
                     // Waiting processing end.
                 }
@@ -54,7 +54,7 @@ namespace RockVR.Video.Demo
             {
                 if (!isPlayVideo)
                 {
-                    if (GUI.Button(new Rect(10, Screen.height - 60, 150, 50), "View Video"))
+                    if (GUI.Button(new Rect(10, Screen.height - 60, 150, 50), "Ver video"))
                     {
 #if UNITY_5_6_OR_NEWER
                         // Set root folder.
@@ -66,7 +66,7 @@ namespace RockVR.Video.Demo
                 }
                 else
                 {
-                    if (GUI.Button(new Rect(10, Screen.height - 60, 150, 50), "Next Video"))
+                    if (GUI.Button(new Rect(10, Screen.height - 60, 150, 50), "Siguiente video"))
                     {
                         // Turn to next video.
                         VideoPlayer.instance.NextVideo();

@@ -1,15 +1,15 @@
 <Propiedades>
                       <Nombre>simulation.conf</Nombre>
                       <Utero>
-                          <Dilatacion>1-2</Dilatacion>
-                          <Borramiento>40-50</Borramiento>
-                          <Consistencia>Media</Consistencia>
-                          <Posicion>Media</Posicion>
-                          <Plano>I</Plano>
+                          <Dilatacion>0</Dilatacion>
+                          <Borramiento>30</Borramiento>
+                          <Consistencia>Firme</Consistencia>
+                          <Posicion>Posterior</Posicion>
+                          <Plano>SES</Plano>
                           <Madre>primípara</Madre>
                        </Utero>
                        <Bebe>
-                          <Tipo>4</Tipo>
-                          <Orientacion>DIA</Orientacion>
+                          <Tipo>3</Tipo>
+                          <Orientacion>DP</Orientacion>
                        </Bebe>
                   </Propiedades>

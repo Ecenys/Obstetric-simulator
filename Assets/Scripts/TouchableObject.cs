@@ -18,7 +18,7 @@ public class TouchableObject : MonoBehaviour {
         XmlDocument doc = new XmlDocument();
         doc.LoadXml(options);
 
-        AsignarValores(doc);
+        //AsignarValores(doc);
         damping = 0;
 
         var devicePosition = GameObject.Find("Haptic Origin");

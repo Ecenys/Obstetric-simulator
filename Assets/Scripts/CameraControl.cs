@@ -58,63 +58,64 @@ public class CameraControl : MonoBehaviour {
 			var yMove = Input.GetAxis ("Mouse Y") * -1f * Time.deltaTime;
 			transform.Translate(xMove, yMove, 0f, Space.Self);
 		}
-        //Debug.Log(transform.position);
 
-        if (Input.GetKey(KeyCode.UpArrow))
-            transform.Translate(0f, 0f, 0.5f * Time.deltaTime, Space.World);
-        else if (Input.GetKey(KeyCode.DownArrow))
-            transform.Translate(0f, 0f, -0.5f * Time.deltaTime, Space.World);
-        else if (Input.GetKey(KeyCode.LeftArrow))
-            transform.Translate(-0.5f * Time.deltaTime, 0f, 0f, Space.World);
-        else if (Input.GetKey(KeyCode.RightArrow))
-            transform.Translate(0.5f * Time.deltaTime, 0f, 0f, Space.World);
-        else if (Input.GetKey(KeyCode.Keypad1))
-            transform.position = new Vector3(2f, position, 0.341f);
-        else if (Input.GetKey(KeyCode.Keypad2))
-            transform.position = new Vector3(4f, position, 0.341f);
-        else if (Input.GetKey(KeyCode.Keypad3))
-            transform.position = new Vector3(6f, position, 0.341f);
-        else if (Input.GetKey(KeyCode.Keypad4))
-            transform.position = new Vector3(8f, position, 0.341f);
-        else if (Input.GetKey(KeyCode.Keypad5))
-            transform.position = new Vector3(10f, position, 0.341f);
-        else if (Input.GetKey(KeyCode.Keypad6))
-            transform.position = new Vector3(12f, position, 0.341f);
-        else if (Input.GetKey(KeyCode.Keypad7))
-            transform.position = new Vector3(14f, position, 0.341f);
-        else if (Input.GetKey(KeyCode.Keypad8))
-            transform.position = new Vector3(16f, position, 0.341f);
-        else if (Input.GetKey(KeyCode.Keypad0))
-            transform.position = new Vector3(0f, position, 0.341f);
-        else if (Input.GetKey(KeyCode.Q)) {
-            transform.position = new Vector3(0f, -1f, 0.341f);
-            position = -1;
-        }
-        else if (Input.GetKey(KeyCode.W))
-        {
-            transform.position = new Vector3(0f, -2f, 0.341f);
-            position = -2;
-        }
-        else if (Input.GetKey(KeyCode.E))
-        {
-            transform.position = new Vector3(0f, -3f, 0.341f);
-            position = -3;
-        }
-        else if (Input.GetKey(KeyCode.R))
-        {
-            transform.position = new Vector3(0f, -4f, 0.341f);
-            position = -4;
-        }
-        else if (Input.GetKey(KeyCode.T))
-        {
-            transform.position = new Vector3(0f, -5f, 0.341f);
-            position = -5;
-        }
-        else if (Input.GetKey(KeyCode.Y))
-        {
-            transform.position = new Vector3(0f, -6f, 0.341f);
-            position = -6;
-        }
+        ////Controles especiales para realizar las pruebas
+        
+        //if (Input.GetKey(KeyCode.UpArrow))
+        //    transform.Translate(0f, 0f, 0.5f * Time.deltaTime, Space.World);
+        //else if (Input.GetKey(KeyCode.DownArrow))
+        //    transform.Translate(0f, 0f, -0.5f * Time.deltaTime, Space.World);
+        //else if (Input.GetKey(KeyCode.LeftArrow))
+        //    transform.Translate(-0.5f * Time.deltaTime, 0f, 0f, Space.World);
+        //else if (Input.GetKey(KeyCode.RightArrow))
+        //    transform.Translate(0.5f * Time.deltaTime, 0f, 0f, Space.World);
+        //else if (Input.GetKey(KeyCode.Keypad1))
+        //    transform.position = new Vector3(2f, position, 0.341f);
+        //else if (Input.GetKey(KeyCode.Keypad2))
+        //    transform.position = new Vector3(4f, position, 0.341f);
+        //else if (Input.GetKey(KeyCode.Keypad3))
+        //    transform.position = new Vector3(6f, position, 0.341f);
+        //else if (Input.GetKey(KeyCode.Keypad4))
+        //    transform.position = new Vector3(8f, position, 0.341f);
+        //else if (Input.GetKey(KeyCode.Keypad5))
+        //    transform.position = new Vector3(10f, position, 0.341f);
+        //else if (Input.GetKey(KeyCode.Keypad6))
+        //    transform.position = new Vector3(12f, position, 0.341f);
+        //else if (Input.GetKey(KeyCode.Keypad7))
+        //    transform.position = new Vector3(14f, position, 0.341f);
+        //else if (Input.GetKey(KeyCode.Keypad8))
+        //    transform.position = new Vector3(16f, position, 0.341f);
+        //else if (Input.GetKey(KeyCode.Keypad0))
+        //    transform.position = new Vector3(0f, position, 0.341f);
+        //else if (Input.GetKey(KeyCode.Q)) {
+        //    transform.position = new Vector3(0f, -1f, 0.341f);
+        //    position = -1;
+        //}
+        //else if (Input.GetKey(KeyCode.W))
+        //{
+        //    transform.position = new Vector3(0f, -2f, 0.341f);
+        //    position = -2;
+        //}
+        //else if (Input.GetKey(KeyCode.E))
+        //{
+        //    transform.position = new Vector3(0f, -3f, 0.341f);
+        //    position = -3;
+        //}
+        //else if (Input.GetKey(KeyCode.R))
+        //{
+        //    transform.position = new Vector3(0f, -4f, 0.341f);
+        //    position = -4;
+        //}
+        //else if (Input.GetKey(KeyCode.T))
+        //{
+        //    transform.position = new Vector3(0f, -5f, 0.341f);
+        //    position = -5;
+        //}
+        //else if (Input.GetKey(KeyCode.Y))
+        //{
+        //    transform.position = new Vector3(0f, -6f, 0.341f);
+        //    position = -6;
+        //}
         UpdateHapticPosition();
         UpdateHapticRotation();
 	}

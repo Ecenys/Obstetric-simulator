@@ -22,15 +22,18 @@ public class GeneratorController : MonoBehaviour
     private static int ITipo;
     private static int IOrientacion;
 
+    private float x, z;
+
     ReaderWriter rw;
     string xml;
 
     //partes del cuerpo
-    public GameObject MeshAnterior, MeshMedio, MeshPosterior;
+    public GameObject MeshUtero, MeshUteroAmpliado;
     public GameObject MeshCabeza, MeshFontanelas, Cara, Nalgas, Espalda;
     //public GameObject OrigenAnteriorBebe, OrigenMedioBebe, OrigenPosteriorBebe;
     //public GameObject OrigenAnterior, OrigenMedio, OrigenPosterior;
-    public GameObject Cabeza, Donut;
+    public GameObject Cabeza, Cabeza2, CabezaVisual, Donut, Donut0;
+    public GameObject HapticScaler;
 
     //variables internas
     private double consistencia;
@@ -52,39 +55,6 @@ public class GeneratorController : MonoBehaviour
         //Simulacion
         //Bebe
         switch (Tipo)
-        {
-            //seleccionar modelo bebe
-            case ("1"):
-                Debug.Log("cabeza 1");
-                Cabeza.transform.localRotation = Quaternion.Euler(-48.5f, Cabeza.transform.localRotation.y, Cabeza.transform.localRotation.z);
-                break;
-            case ("2"):
-                Cabeza.transform.localRotation = Quaternion.Euler(-62f, Cabeza.transform.localRotation.y, Cabeza.transform.localRotation.z);
-                Debug.Log("cabeza 2");
-                break;
-            case ("3"):
-                Cabeza.transform.localRotation = Quaternion.Euler(-48.5f, Cabeza.transform.localRotation.y, Cabeza.transform.localRotation.z);
-                Debug.Log("cabeza 3");
-                break;
-            case ("4"):
-                Cabeza.transform.localRotation = Quaternion.Euler(-76f, Cabeza.transform.localRotation.y, Cabeza.transform.localRotation.z);
-                Debug.Log("cabeza 4");
-                break;
-            case ("5"):
-                Cabeza.transform.localRotation = Quaternion.Euler(-90f, Cabeza.transform.localRotation.y, Cabeza.transform.localRotation.z);
-                Debug.Log("cabeza 5");
-                break;
-            case ("6"):
-                Cabeza.transform.localRotation = Quaternion.Euler(-104f, Cabeza.transform.localRotation.y, Cabeza.transform.localRotation.z);
-                Debug.Log("cabeza 6");
-                break;
-            case ("7")://oreja
-                Cabeza.transform.rotation = Quaternion.Euler(Cabeza.transform.rotation.x, -90, Cabeza.transform.rotation.z);
-                Debug.Log("oreja");
-                break;
-        }
-            //seleccionar modelo bebe
-            switch (Tipo)
         {
             case ("1"):
             case ("2"):
@@ -120,45 +90,96 @@ public class GeneratorController : MonoBehaviour
                 Debug.LogError("No se ha generado la cabeza");
                 break;
         }
+        switch (Tipo)
+        {
+            //seleccionar modelo bebe
+            case ("1"):
+                Debug.Log("cabeza 1");
+                x = 0;
+                //Cabeza.transform.localRotation = Quaternion.Euler(-90f, Cabeza.transform.localRotation.y, Cabeza.transform.localRotation.z);
+                break;
+            case ("2"):
+                x = 10f;
+                //Cabeza.transform.rotation = Quaternion.Euler(-110f, Cabeza.transform.rotation.y, Cabeza.transform.rotation.z);
+                Debug.Log("cabeza 2");
+                break;
+            case ("3"):
+                x = 20f;
+                //Cabeza.transform.rotation = Quaternion.Euler(-120f, Cabeza.transform.rotation.y, Cabeza.transform.rotation.z);
+                Debug.Log("cabeza 3");
+                break;
+            case ("4"):
+                x = 40f;
+                //Cabeza.transform.rotation = Quaternion.Euler(-130f, Cabeza.transform.rotation.y, Cabeza.transform.rotation.z);
+                Debug.Log("cabeza 4");
+                break;
+            case ("5"):
+                x = 50f;
+                //Cabeza.transform.rotation = Quaternion.Euler(-140f, Cabeza.transform.rotation.y, Cabeza.transform.rotation.z);
+                Debug.Log("cabeza 5");
+                break;
+            case ("6"):
+                x = 60f;
+                //Cabeza.transform.rotation = Quaternion.Euler(-150f, Cabeza.transform.rotation.y, Cabeza.transform.rotation.z);
+                Debug.Log("cabeza 6");
+                break;
+            case ("7")://oreja
+                Cabeza.transform.rotation = Quaternion.Euler(Cabeza.transform.rotation.x, -90, Cabeza.transform.rotation.z);
+                Debug.Log("oreja");
+                break;
+        }
+        //seleccionar modelo bebe
+
         switch (Orientacion)
         {
             case "DA":
                 Debug.Log("DA");
-                Cabeza.transform.localRotation = Quaternion.Euler(Cabeza.transform.localRotation.x, 180, Cabeza.transform.localRotation.z);
+                z = 180f;
+                //Cabeza.transform.localRotation = Quaternion.Euler(Cabeza.transform.localRotation.x, Cabeza.transform.localRotation.y, 180);
                 break;
             case "DIA":
                 Debug.Log("DIA");
-                Cabeza.transform.localRotation = Quaternion.Euler(Cabeza.transform.localRotation.x, 135, Cabeza.transform.localRotation.z);
+                z = 135f;
+                //Cabeza.transform.localRotation = Quaternion.Euler(Cabeza.transform.localRotation.x, Cabeza.transform.localRotation.y, 135);
                 break;
             case "DITDerecha":
                 Debug.Log("DITDerecha");
-                Cabeza.transform.localRotation = Quaternion.Euler(Cabeza.transform.localRotation.x, 90, Cabeza.transform.localRotation.z);
+                z = 90f;
+                //Cabeza.transform.localRotation = Quaternion.Euler(Cabeza.transform.localRotation.x, Cabeza.transform.localRotation.y, 90);
                 break;
             case "DIP":
+                z = 45f;
                 Debug.Log("DIP");
-                Cabeza.transform.localRotation = Quaternion.Euler(Cabeza.transform.localRotation.x, 45, Cabeza.transform.localRotation.z);
+                //Cabeza.transform.localRotation = Quaternion.Euler(Cabeza.transform.localRotation.x, Cabeza.transform.localRotation.y, 45);
                 break;
             case "DP":
                 Debug.Log("DP");
-                Cabeza.transform.localRotation = Quaternion.Euler(Cabeza.transform.localRotation.x, 0, Cabeza.transform.localRotation.z);
+                z = 0f;
+                //Cabeza.transform.localRotation = Quaternion.Euler(Cabeza.transform.localRotation.x, Cabeza.transform.localRotation.y, 0);
                 break;
             case "DDP":
                 Debug.Log("DDP");
-                Cabeza.transform.localRotation = Quaternion.Euler(Cabeza.transform.localRotation.x, 225, Cabeza.transform.localRotation.z);
+                z = -45f;
+                //Cabeza.transform.localRotation = Quaternion.Euler(Cabeza.transform.localRotation.x, Cabeza.transform.localRotation.y, -45);
                 break;
             case "DITIzquierda":
                 Debug.Log("DITIzquierda");
-                Cabeza.transform.localRotation = Quaternion.Euler(Cabeza.transform.localRotation.x, 270, Cabeza.transform.localRotation.z);
+                z = -90f;
+                //Cabeza.transform.localRotation = Quaternion.Euler(Cabeza.transform.localRotation.x, Cabeza.transform.localRotation.y, -90);
                 break;
             case "DDA":
                 Debug.Log("DDA");
-                Cabeza.transform.localRotation = Quaternion.Euler(Cabeza.transform.localRotation.x, 315, Cabeza.transform.localRotation.z);
+                z = -135f;
+                //Cabeza.transform.localRotation = Quaternion.Euler(Cabeza.transform.localRotation.x, Cabeza.transform.localRotation.y, -135);
                 break;
             default:
-                Debug.Log("No he encontrado nada, tengo la orgientación: "+ Orientacion);
+                Debug.Log("No he encontrado nada, tengo la orgientación: " + Orientacion);
                 break;
 
         }
+        Cabeza.transform.localRotation = Quaternion.Euler(Cabeza.transform.localRotation.x + x, Cabeza.transform.localRotation.y, Cabeza.transform.localRotation.z);
+
+        Cabeza.transform.localRotation=Quaternion.Euler(Cabeza.transform.localRotation.x, Cabeza.transform.localRotation.y, Cabeza.transform.localRotation.z + z);
 
         //Madre
         switch (Dilatacion)
@@ -173,17 +194,25 @@ public class GeneratorController : MonoBehaviour
         //    monitor.Dilatacion = "+5";
             case "0":
                 Debug.Log("0");
-                Donut.transform.localScale = new Vector3(1f, Donut.transform.localScale.y, 1f);
+                Donut0.SetActive(true);
+                Donut.SetActive(false);
+                //Donut.transform.localScale = new Vector3(1f, Donut.transform.localScale.y, 1f);
                 break;
             case "1-2":
                 Debug.Log("1-2");
+                Donut0.SetActive(false);
+                Donut.SetActive(true);
                 Donut.transform.localScale = new Vector3(60f, Donut.transform.localScale.y, 60f);
                 break;
             case "3-4":
+                Donut0.SetActive(false);
+                Donut.SetActive(true);
                 Debug.Log("3-4");
                 Donut.transform.localScale = new Vector3(140f, Donut.transform.localScale.y, 140f);
                 break;
             case "5":
+                Donut0.SetActive(false);
+                Donut.SetActive(true);
                 Debug.Log("5");
                 Donut.transform.localScale = new Vector3(200f, Donut.transform.localScale.y, 200f);
                 break;
@@ -305,21 +334,34 @@ public class GeneratorController : MonoBehaviour
             //Seleccionar plano
             case "SES":
                 Debug.Log("SES");
-                Cabeza.transform.localPosition = new Vector3(0.23f, 3.32f, 12.31f);
+                Cabeza.transform.position = new Vector3(0.019f, .37f, 1.193f);
+                MeshUtero.SetActive(true);
+                MeshUteroAmpliado.SetActive(false);
                 break;
             case "I":
                 Debug.Log("I");
-                Cabeza.transform.localPosition= new Vector3(0.23f, 0.65f, 11.31f);
+                Cabeza.transform.position= new Vector3(0.019f, 0.285f, 1.118f);
+                MeshUtero.SetActive(true);
+                MeshUteroAmpliado.SetActive(false);
                 break;
             case "II":
                 Debug.Log("II");
-                Cabeza.transform.localPosition = new Vector3(0.23f, 0.56f, 11.91f);
+                Cabeza.transform.position = new Vector3(0.019f, 0.214f, 1.055f);
+                MeshUtero.SetActive(true);
+                MeshUteroAmpliado.SetActive(false);
                 break;
             case "III":
                 Debug.Log("III");
-                Cabeza.transform.localPosition = new Vector3(0.24f, -0.73f, 9.55f);
+                Cabeza.transform.position = new Vector3(0.019f, 0.121f, 1.034f);
+                MeshUtero.SetActive(false);
+                MeshUteroAmpliado.SetActive(true);
                 break;
         }
+
+        //Reordeno parentesco
+        CabezaVisual.transform.parent = HapticScaler.transform;
+        MeshCabeza.transform.parent = HapticScaler.transform;
+        MeshFontanelas.transform.parent = HapticScaler.transform;
 
     }
 
@@ -352,12 +394,14 @@ public class GeneratorController : MonoBehaviour
             this.Orientacion = Orientacion[0].InnerText;
         }
         catch (System.Exception) { Debug.Log("Archivo corrupto"); }
+
     }
     public double GetConsistencia()
     {
         //se envia a touchableobject para realizar el cambio ahí
         return consistencia;
-}
+    }
+
 }
 
 
