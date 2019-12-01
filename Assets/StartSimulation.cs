@@ -18,4 +18,18 @@ public class StartSimulation : MonoBehaviour
         //Emepezar simulacion
         SceneManager.LoadScene("Main");
     }
+
+    public void CargarCaso()
+    {
+        GameObject monitor = GameObject.FindGameObjectWithTag("MonitorLoad");
+        string direccion = monitor.GetComponent<LoadCaseScript>().getName();
+        //lectura
+        StreamReader reader = new StreamReader(@"Casos\"+ direccion +"*.txt");
+        string text = reader.ReadToEnd();
+        reader.Close();
+        //simulación
+        text = GameObject.FindWithTag("God").GetComponent<EncryptorScript>().Encriptar(text); //encriptación de xml
+        File.WriteAllText(@"simulation.conf", text);
+        SceneManager.LoadScene("Main");
+    }
 }
