@@ -1,15 +1,23 @@
 <Propiedades>
                       <Nombre>simulation.conf</Nombre>
                       <Utero>
+<<<<<<< HEAD
                           <Dilatacion>1-2</Dilatacion>
                           <Borramiento>40-50</Borramiento>
                           <Consistencia>Firme</Consistencia>
                           <Posicion>Posterior</Posicion>
                           <Plano>I</Plano>
+=======
+                          <Dilatacion>0</Dilatacion>
+                          <Borramiento>30</Borramiento>
+                          <Consistencia>Firme</Consistencia>
+                          <Posicion>Posterior</Posicion>
+                          <Plano>SES</Plano>
+>>>>>>> parent of 8208cd4... Fixed bugs 2
                           <Madre>primípara</Madre>
                        </Utero>
                        <Bebe>
-                          <Tipo>1</Tipo>
-                          <Orientacion>DA</Orientacion>
+                          <Tipo>2</Tipo>
+                          <Orientacion>DIP</Orientacion>
                        </Bebe>
                   </Propiedades>

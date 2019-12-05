@@ -18,6 +18,7 @@ public class StartSimulation : MonoBehaviour
         //Emepezar simulacion
         SceneManager.LoadScene("Main");
     }
+<<<<<<< HEAD:Assets/Scripts/Selector/StartSimulation.cs
 
     public void CargarCaso()
     {
@@ -32,4 +33,6 @@ public class StartSimulation : MonoBehaviour
         File.WriteAllText(@"simulation.conf", text);
         SceneManager.LoadScene("Main");
     }
+=======
+>>>>>>> parent of 8208cd4... Fixed bugs 2:Assets/StartSimulation.cs
 }
