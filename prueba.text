@@ -2,9 +2,9 @@
                       <Nombre>simulation.conf</Nombre>
                       <Utero>
                           <Dilatacion>1-2</Dilatacion>
-                          <Borramiento>80</Borramiento>
-                          <Consistencia>Media</Consistencia>
-                          <Posicion>Media</Posicion>
+                          <Borramiento>40-50</Borramiento>
+                          <Consistencia>Firme</Consistencia>
+                          <Posicion>Posterior</Posicion>
                           <Plano>I</Plano>
                           <Madre>primípara</Madre>
                        </Utero>
